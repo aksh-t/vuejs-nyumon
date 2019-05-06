@@ -10,10 +10,11 @@
 <script>
     console.assert(typeof Vue !== 'undefined');
 
-    new Vue({
-        el: '#app',
+    var vm = new Vue({
         data: {
             message: 'こんにちは！'
         }
     })
+
+    vm.$mount('#app')
 </script>

@@ -46,6 +46,12 @@ var vm = new Vue({
             return {
                 error: !this.canBuy
             }
+        },
+        errorMessageStyle: function () {
+            return {
+                border: this.canBuy ? '' : '1px solid red',
+                color: this.canBuy ? '' : 'red'
+            }
         }
     }
 })

@@ -1,7 +1,23 @@
+<script src="https://unpkg.com/vue@2.5.17"></script>
+
 <div id="fruits-list">
-    <h1>フルーツ一覧</h1>
-    <p>季節の代表的なフルーツの一覧です</p>
-    <table>
+    <fruits-list-title></fruits-list-title>
+    <fruits-list-description></fruits-list-description>
+    <fruits-list-table></fruits-list-table>
+</div>
+
+<script>
+    Vue.component('fruit-list-title',{
+        template: '<h1>フルーツ一覧</h1>'
+    })
+
+    Vue.component('fruits-list-description',{
+        template: '<p>季節の代表的なフルーツの一覧です</p>'
+    })
+    
+    Vue.component('fruits-list-table', {
+        template: `
+        <table>
         <tr>
             <th>季節</th>
             <th>フルーツ</th>
@@ -23,4 +39,10 @@
             <th>みかん</th>
         </tr>
     </table>
-</div>
+    `
+    })
+
+    new Vue({
+        el: '#fruits-list'
+    })
+</script>
